@@ -21,14 +21,12 @@
             From:<input type="date" name="from"><br>
             To:<input type="date" name="to"><br>
             Created by: <select name="create">
-                <option value="0">All</option>
                 <c:forEach items="${requestScope.listEmp}" var="e">
                     <option value="${e.id}">${e.id}</option>
                 </c:forEach>
             </select>
             <br>
             Reviewed by: <select name="review">
-                <<option value="0">All</option>
                 <c:forEach items="${requestScope.listEmp}" var="e">
                     <option value="${e.id}">${e.id}</option>
                 </c:forEach>
