@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app version="3.1" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd">
+    <servlet>
+        <servlet-name>NewServlet</servlet-name>
+        <servlet-class>controller.NewServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>NewServlet</servlet-name>
+        <url-pattern>/NewServlet</url-pattern>
+    </servlet-mapping>
+    <listener>
+        <listener-class> controller.AttributeListener </listener-class>
+    </listener>
+    <listener>
+        <listener-class> controller.RequestListener </listener-class>
+    </listener>
+    <listener>
+        <listener-class> controller.SessionListen </listener-class>
+    </listener>
+    <servlet>
+        <servlet-name>ToA</servlet-name>
+        <servlet-class>controller.ToA</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>ToA</servlet-name>
+        <url-pattern>/ToA</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <servlet-name>ToB</servlet-name>
+        <servlet-class>controller.ToB</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>ToB</servlet-name>
+        <url-pattern>/ToB</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <servlet-name>ToC</servlet-name>
+        <servlet-class>controller.ToC</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>ToC</servlet-name>
+        <url-pattern>/ToC</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <servlet-name>AuthenticationController</servlet-name>
+        <servlet-class>controller.AuthenticationController</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>AuthenticationController</servlet-name>
+        <url-pattern>/Login</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <servlet-name>Logout</servlet-name>
+        <servlet-class>controller.Logout</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>Logout</servlet-name>
+        <url-pattern>/Logout</url-pattern>
+    </servlet-mapping>
+    <session-config>
+        <session-timeout>
+            30
+        </session-timeout>
+    </session-config>
+</web-app>
